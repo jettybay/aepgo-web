@@ -42,11 +42,11 @@ export default function RepaymentChart() {
       <div className="space-y-3 text-sm">
         <div className="flex justify-between">
           <span className="text-gray-600">Total Amount</span>
-          <span className="font-medium">€330.00</span>
+          <span className="font-medium">₦330.00</span>
         </div>
         <div className="flex justify-between">
           <span className="text-gray-600">Remaining</span>
-          <span className="font-medium text-purple-600">€128.50</span>
+          <span className="font-medium text-purple-600">₦128.50</span>
         </div>
       </div>
 
