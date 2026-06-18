@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Bell, MapPin, Calendar, User } from 'lucide-react';
+import Link from 'next/link';
+
 import Sidebar from '@/components/layout/Sidebar';
 import Header from '@/components/layout/Header';
 import MetricCard from '@/components/dashboard/MetricCard';
@@ -18,8 +19,9 @@ const Dashboard = () => {
       <div className="flex-1 flex flex-col overflow-hidden">
         <Header />
 
-        <main className="flex-1 overflow-auto p-6 lg:p-8">
+        <main className="flex-1 overflow-auto p-6 lg:p-8 pb-28">
           <div className="max-w-7xl mx-auto">
+
             <div className="mb-8">
               {/* <h1 className="text-3xl font-bold text-gray-900">Welcome back, Amina! 👋</h1> */}
               <p className="text-gray-600 mt-1">Power your farm, grow your future.</p>
@@ -59,7 +61,9 @@ const Dashboard = () => {
               <div className="lg:col-span-7 card p-6">
                 <div className="flex justify-between items-center mb-6">
                   <h3 className="text-xl font-semibold">My Equipment</h3>
-                  <button className="text-purple-600 hover:underline">View all</button>
+                  <Link href="/equipment" className="text-purple-600 hover:underline">
+                    View all
+                  </Link>
                 </div>
                 
                 <div className="space-y-5">

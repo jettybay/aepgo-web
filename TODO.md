@@ -19,5 +19,11 @@
   - [x] npm run lint
   - [x] npm run build
 
+## TODO - Mobile bottom tabs
+
+- [x] Implement mobile bottom tab bar inside `components/layout/Sidebar.tsx`
+- [x] Add mobile padding-bottom in `app/dashboard/page.tsx` to avoid overlap with fixed bar
+- [x] Run lint/build to verify
+
 
 
