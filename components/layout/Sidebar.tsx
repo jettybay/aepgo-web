@@ -92,58 +92,36 @@ export default function Sidebar() {
         <div className="h-16 bg-gradient-to-t from-black/35 via-black/0 to-black/0" />
 
         <div className="mx-4 mb-3 rounded-3xl bg-white/95 shadow-[0_20px_60px_-15px_rgba(88,27,135,0.35)] border border-purple-100 backdrop-blur">
-          <nav className="grid grid-cols-4">
-            {menuItems.slice(0, 4).map((item) => {
+          {/* Combined all menu items into a single grid for consistent layout */}
+          <nav className="grid grid-cols-4 gap-2 p-2">
+            {menuItems.map((item) => {
               const isActive = pathname === item.href;
               const Icon = item.icon;
               return (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`flex flex-col items-center justify-center gap-1 py-3 rounded-3xl transition-all select-none ${
+                  className={`flex flex-col items-center justify-center gap-1 py-2 rounded-2xl transition-all select-none text-[11px] font-semibold leading-none
+                    ${
                     isActive
-                      ? 'text-purple-700'
+                        ? 'text-purple-700' // Active text color for the whole link
                       : 'text-gray-600 hover:text-purple-700'
                   }`}
                 >
                   <span
                     className={`p-2 rounded-2xl transition-all ${
-                      isActive ? 'bg-purple-50 text-purple-700' : 'bg-transparent'
+                      isActive ? 'bg-purple-50 text-purple-700' : 'bg-transparent' // Active background/color for the icon container
                     }`}
                   >
-                    <Icon size={22} />
+                    <Icon size={22} /> {/* Standardized icon size */}
                   </span>
-                  <span className="text-[11px] font-semibold leading-none">
+                  <span>
                     {item.label}
                   </span>
                 </Link>
               );
             })}
           </nav>
-
-          {/* quick extra actions row */}
-          <div className="px-3 pb-3 -mt-1">
-            <div className="grid grid-cols-4 gap-2">
-              {menuItems.slice(4, 8).map((item) => {
-                const isActive = pathname === item.href;
-                const Icon = item.icon;
-                return (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    className={`flex items-center justify-center rounded-2xl px-2 py-2 text-[11px] font-semibold transition-all ${
-                      isActive
-                        ? 'bg-purple-600 text-white shadow-sm'
-                        : 'bg-purple-50 text-purple-700 hover:bg-purple-100'
-                    }`}
-                  >
-                    <Icon size={16} />
-                    <span className="ml-1 hidden sm:inline">{item.label}</span>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
         </div>
       </div>
     </>
