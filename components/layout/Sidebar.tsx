@@ -18,11 +18,11 @@ const menuItems = [
   { icon: Home, label: 'Dashboard', href: '/dashboard' },
   { icon: Package, label: 'Equipment', href: '/equipment' },
   { icon: CreditCard, label: 'Payments', href: '/payment' },
-  { icon: FileText, label: 'Contracts', href: '/dashboard/contracts' },
-  { icon: BarChart3, label: 'Usage & Monitoring', href: '/dashboard/monitoring' },
+  { icon: FileText, label: 'Advisor', href: '/advisor' },
   { icon: Users, label: 'Farm Activity', href: '/dashboard/activity' },
   { icon: Headphones, label: 'Support', href: '/dashboard/support' },
   { icon: Settings, label: 'Settings', href: '/dashboard/settings' },
+  { icon: BarChart3, label: 'Contracts', href: '/dashboard/contracts' },
 ];
 
 export default function Sidebar() {

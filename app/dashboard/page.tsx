@@ -19,13 +19,8 @@ const Dashboard = () => {
       <div className="flex-1 flex flex-col overflow-hidden">
         <Header />
 
-        <main className="flex-1 overflow-auto p-6 lg:p-8 pb-28">
+        <main className="flex-1 overflow-auto p-6 lg:p-8 pb-32">
           <div className="max-w-7xl mx-auto">
-
-            <div className="mb-8">
-              {/* <h1 className="text-3xl font-bold text-gray-900">Welcome back, Amina! 👋</h1> */}
-              <p className="text-gray-600 mt-1">Power your farm, grow your future.</p>
-            </div>
 
             {/* Metrics Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">

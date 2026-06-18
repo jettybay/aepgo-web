@@ -14,9 +14,7 @@ export default function Header() {
           <h2 className="text-lg sm:text-2xl font-semibold text-gray-800 truncate">
             Welcome back, Amina 👋
           </h2>
-          <p className="text-xs sm:text-sm text-gray-500 -mt-0.5 hidden sm:block">
-            Power your farm, grow your future.
-          </p>
+          
         </div>
       </div>
 
@@ -26,7 +24,7 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-2 bg-gray-100 px-4 py-2.5 rounded-2xl">
           <MapPin size={18} />
           <select className="bg-transparent font-medium focus:outline-none cursor-pointer">
-            <option>Kaduna, Nigeria</option>
+            <option>Ede, Nigeria</option>
           </select>
         </div>
 
@@ -47,7 +45,7 @@ export default function Header() {
         {/* Profile details (desktop) */}
         <div className="hidden md:flex items-center gap-3">
           <div>
-            <p className="font-semibold text-sm">Amina Yusuf</p>
+            <p className="font-semibold text-sm">Amina Shitu</p>
             <p className="text-xs text-gray-500 -mt-0.5">Farm Owner</p>
           </div>
         </div>

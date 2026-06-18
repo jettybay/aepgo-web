@@ -12,7 +12,7 @@ export default function WeatherWidget() {
   return (
     <div>
       <h3 className="font-semibold text-lg mb-4">Weather Forecast</h3>
-      <p className="text-sm text-gray-500 mb-6">Kaduna, Nigeria</p>
+      <p className="text-sm text-gray-500 mb-6">Ede, Nigeria</p>
 
       {/* Current Weather */}
       <div className="bg-gradient-to-br from-sky-50 to-blue-50 rounded-3xl p-6 text-center mb-8">

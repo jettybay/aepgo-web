@@ -13,7 +13,7 @@ const equipmentList = [
     type: "Irrigation",
     dailyUsage: "5.6 kWh",
     status: 87,
-    location: "Kaduna, Nigeria",
+    location: "Ede, Nigeria",
     lastMaintenance: "12 Apr 2025",
     health: "Excellent"
   },
@@ -24,7 +24,7 @@ const equipmentList = [
     type: "Processing",
     dailyUsage: "3.2 kWh",
     status: 74,
-    location: "Kaduna, Nigeria",
+    location: "Ede, Nigeria",
     lastMaintenance: "28 Apr 2025",
     health: "Good"
   },
@@ -35,7 +35,7 @@ const equipmentList = [
     type: "Drying",
     dailyUsage: "2.1 kWh",
     status: 68,
-    location: "Kaduna, Nigeria",
+    location: "Ede, Nigeria",
     lastMaintenance: "05 May 2025",
     health: "Fair"
   },
