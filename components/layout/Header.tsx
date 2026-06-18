@@ -8,12 +8,18 @@ export default function Header() {
     <header className="sticky top-0 z-40 bg-white/90 backdrop-blur border-b px-4 sm:px-8 py-3 sm:py-5 flex items-center justify-between gap-2 sm:gap-4">
       {/* Left */}
       <div className="flex items-center gap-2 sm:gap-4 min-w-0 flex-shrink-0">
+        {/* User Initials (Desktop) - Replaces logo when Sidebar is visible */}
+        <div className="hidden lg:flex w-11 h-11 bg-purple-100 text-purple-700 font-bold items-center justify-center rounded-2xl text-lg">
+          AS
+        </div>
+
+        {/* Logo (Mobile/Small Devices) */}
         <Image 
           src="/images/aepgo-logo.png" 
           alt="AEPGO Logo" 
           width={44} 
           height={44} 
-          className="w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-2xl object-contain"
+          className="lg:hidden w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-2xl object-contain"
         />
         <div className="min-w-0">
           <h2 className="text-xs sm:text-2xl font-semibold text-gray-800 truncate max-w-[80px] sm:max-w-none">
