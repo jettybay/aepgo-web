@@ -5,9 +5,9 @@ import Sidebar from '@/components/layout/Sidebar';
 import Header from '@/components/layout/Header';
 
 const recentPayments = [
-  { date: "15 Apr 2025", amount: "₦45,000.00", status: "Success", method: "Paystack" },
-  { date: "15 Mar 2025", amount: "₦45,000.00", status: "Success", method: "Bank Transfer" },
-  { date: "15 Feb 2025", amount: "₦45,000.00", status: "Success", method: "USSD" },
+  { date: "15 Apr 2026", amount: "₦128,450.00", status: "Success", method: "Paystack" },
+  { date: "15 Mar 2026", amount: "₦345,000.00", status: "Success", method: "Bank Transfer" },
+  { date: "15 Feb 2026", amount: "₦210,700.00", status: "Success", method: "USSD" },
 ];
 
 export default function PaymentsPage() {
@@ -30,8 +30,8 @@ export default function PaymentsPage() {
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                 <div>
                   <p className="text-purple-100 font-medium">Total Outstanding Balance</p>
-                  <p className="text-4xl md:text-5xl font-bold mt-2">₦1,280,000.50</p>
-                  <p className="mt-2">Next payment due: <span className="font-medium">15 May 2025</span></p>
+                  <p className="text-4xl md:text-5xl font-bold mt-2">₦3,745,200.50</p>
+                  <p className="mt-2">Next payment due: <span className="font-medium">15 May 2026</span></p>
                 </div>
                 <button className="bg-white text-purple-700 px-10 py-4 rounded-2xl font-semibold hover:bg-purple-50 transition">
                   Make Payment
@@ -60,7 +60,7 @@ export default function PaymentsPage() {
                   <label className="block text-sm font-medium text-gray-600 mb-2">Amount to Pay (₦)</label>
                   <input 
                     type="number" 
-                    defaultValue="45000" 
+                    defaultValue="150000" 
                     className="w-full px-5 py-4 text-2xl font-bold border-2 border-gray-100 rounded-2xl focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-500/10 transition-all"
                   />
                   <button className="w-full mt-6 purple-btn text-lg py-4">

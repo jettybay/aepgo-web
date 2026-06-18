@@ -26,8 +26,8 @@ const Dashboard = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
               <MetricCard 
                 title="Total Outstanding" 
-                value="₦1,280,000.50" 
-                subtitle="Next due 15 May 2025"
+                value="₦2,560,700.00" 
+                subtitle="Next due 15 May 2026"
                 color="purple"
                 action="Make Payment"
               />
@@ -39,7 +39,7 @@ const Dashboard = () => {
               />
               <MetricCard 
                 title="Total Paid" 
-                value="₦200,001.50" 
+                value="₦890,200.00" 
                 subtitle="+18.5% vs last year"
                 trend="+18.5"
               />

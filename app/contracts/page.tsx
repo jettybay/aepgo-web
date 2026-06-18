@@ -5,25 +5,60 @@ import Sidebar from '@/components/layout/Sidebar';
 import Header from '@/components/layout/Header';
 
 const contracts = [
-  { id: "CON-2025-041", type: "Equipment Financing", status: "Active", amount: "€330.00", endDate: "15 Nov 2025" },
-  { id: "CON-2025-012", type: "Maize Offtake Agreement", status: "Pending", amount: "€450.00", endDate: "30 Jun 2025" },
-  { id: "CON-2024-089", type: "Solar Asset Lease", status: "Completed", amount: "€180.00", endDate: "10 Mar 2025" },
+  { id: "CON-2026-041", type: "Equipment Financing", status: "Active", amount: "₦2,450,000.00", endDate: "15 Nov 2026" },
+  { id: "CON-2026-012", type: "Maize Offtake Agreement", status: "Pending", amount: "₦1,120,800.00", endDate: "30 Jun 2026" },
+  { id: "CON-2024-089", type: "Solar Asset Lease", status: "Completed", amount: "₦740,500.00", endDate: "10 Mar 2026" },
 ];
 
 export default function ContractsPage() {
   return (
     <div className="flex h-screen bg-gray-50 overflow-hidden">
       <Sidebar />
-      <div className="flex-1 flex flex-col overflow-hidden">
+      <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         <Header />
 
-        <main className="flex-1 overflow-auto p-6 lg:p-8">
+        <main className="flex-1 overflow-auto p-4 md:p-8 pb-32">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-3xl font-bold mb-2">Contracts</h1>
             <p className="text-gray-600 mb-8">All your agreements and financing contracts</p>
+            
+            <div className="bg-transparent md:bg-white md:card md:p-8">
+              {/* Mobile View: Card List */}
+              <div className="md:hidden space-y-4">
+                {contracts.map((contract) => (
+                  <div key={contract.id} className="p-5 border border-gray-100 rounded-2xl bg-white shadow-sm hover:border-purple-200 transition-all active:scale-[0.98]">
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <p className="text-[10px] font-bold text-purple-500 uppercase tracking-widest mb-1">{contract.id}</p>
+                        <h4 className="font-bold text-gray-900 leading-tight">{contract.type}</h4>
+                      </div>
+                      <span className={`px-3 py-1.5 rounded-full text-xs font-bold ${
+                        contract.status === 'Active' ? 'bg-emerald-100 text-emerald-700' :
+                        contract.status === 'Pending' ? 'bg-amber-100 text-amber-700' : 'bg-gray-100 text-gray-600'
+                      }`}>
+                        {contract.status}
+                      </span>
+                    </div>
+                    
+                    <div className="flex justify-between items-end border-t border-gray-50 pt-4 mt-4">
+                      <div>
+                        <p className="text-[10px] text-gray-400 font-semibold uppercase mb-0.5">Amount</p>
+                        <p className="font-bold text-lg text-gray-900">{contract.amount}</p>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-[10px] text-gray-400 font-semibold uppercase mb-0.5">End Date</p>
+                        <p className="text-sm font-bold text-gray-700">{contract.endDate}</p>
+                      </div>
+                    </div>
+                    <button className="w-full mt-5 py-3.5 text-sm font-bold text-purple-700 bg-purple-50 rounded-xl hover:bg-purple-100 transition-colors">
+                      View Details
+                    </button>
+                  </div>
+                ))}
+              </div>
 
-            <div className="card p-8">
-              <div className="overflow-x-auto">
+              {/* Desktop View: Table */}
+              <div className="hidden md:block overflow-x-auto">
                 <table className="w-full">
                   <thead>
                     <tr className="border-b">

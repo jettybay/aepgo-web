@@ -31,7 +31,7 @@ export default function Header() {
         {/* Date */}
         <div className="hidden lg:flex items-center gap-2 bg-gray-100 px-4 py-2.5 rounded-2xl">
           <Calendar size={18} />
-          <span className="font-medium">May 5, 2025</span>
+          <span className="font-medium">May 5, 2026</span>
         </div>
 
         {/* Notifications */}

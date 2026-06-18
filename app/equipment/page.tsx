@@ -14,7 +14,7 @@ const equipmentList = [
     dailyUsage: "5.6 kWh",
     status: 87,
     location: "Ede, Nigeria",
-    lastMaintenance: "12 Apr 2025",
+    lastMaintenance: "12 Apr 2026",
     health: "Excellent"
   },
   {
@@ -25,7 +25,7 @@ const equipmentList = [
     dailyUsage: "3.2 kWh",
     status: 74,
     location: "Ede, Nigeria",
-    lastMaintenance: "28 Apr 2025",
+    lastMaintenance: "28 Apr 2026",
     health: "Good"
   },
   {
@@ -36,7 +36,7 @@ const equipmentList = [
     dailyUsage: "2.1 kWh",
     status: 68,
     location: "Ede, Nigeria",
-    lastMaintenance: "05 May 2025",
+    lastMaintenance: "05 May 2026",
     health: "Fair"
   },
 ];
