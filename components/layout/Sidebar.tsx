@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
@@ -33,9 +34,15 @@ export default function Sidebar() {
       {/* Desktop sidebar */}
       <div className="hidden lg:flex w-72 bg-purple-700 text-white flex-col h-full">
         {/* Logo */}
-        <div className="p-6 flex items-center gap-3 border-b border-purple-600">
-          <div className="w-11 h-11 bg-white rounded-2xl flex items-center justify-center text-3xl">
-            ☀️
+        <div className="p-6 flex items-center gap-3 border-b border-purple-600">          
+          <div className="w-11 h-11 bg-white rounded-2xl flex items-center justify-center">
+            <Image
+              src="/images/aepgo-logo.png"
+              alt="AEPGo Logo"
+              width={44}
+              height={44}
+              className="w-11 h-11 rounded-2xl object-contain"
+            />
           </div>
           <div>
             <h1 className="text-3xl font-bold tracking-tight">AEPGo</h1>
