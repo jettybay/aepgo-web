@@ -5,9 +5,9 @@ import Sidebar from '@/components/layout/Sidebar';
 import Header from '@/components/layout/Header';
 
 const contracts = [
-  { id: "CON-2026-041", type: "Equipment Financing", status: "Active", amount: "₦2,450,000.00", endDate: "15 Nov 2026" },
-  { id: "CON-2026-012", type: "Maize Offtake Agreement", status: "Pending", amount: "₦1,120,800.00", endDate: "30 Jun 2026" },
-  { id: "CON-2024-089", type: "Solar Asset Lease", status: "Completed", amount: "₦740,500.00", endDate: "10 Mar 2026" },
+  { id: "CON-2026-041", type: "Equipment Financing", status: "Active", amount: "₦2,450,000.00", endDate: "15 Jan 2026" },
+  { id: "CON-2026-012", type: "Maize Offtake Agreement", status: "Pending", amount: "₦1,120,800.00", endDate: "10 Feb 2026" },
+  { id: "CON-2024-089", type: "Solar Asset Lease", status: "Completed", amount: "₦740,500.00", endDate: "23 Mar 2026" },
 ];
 
 export default function ContractsPage() {

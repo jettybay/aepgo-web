@@ -91,7 +91,7 @@ export default function Sidebar() {
         {/* backdrop */}
         <div className="h-16 bg-gradient-to-t from-black/35 via-black/0 to-black/0" />
 
-        <div className="mx-4 mb-3 rounded-3xl bg-white/95 shadow-[0_20px_60px_-15px_rgba(88,27,135,0.35)] border border-purple-100 backdrop-blur">
+        <div className="mx-4 rounded-3xl bg-white/95 shadow-[0_20px_60px_-15px_rgba(88,27,135,0.35)] border border-purple-100 backdrop-blur">
           {/* Combined all menu items into a single grid for consistent layout */}
           <nav className="grid grid-cols-4 gap-2 p-2">
             {menuItems.map((item) => {
@@ -101,7 +101,7 @@ export default function Sidebar() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`flex flex-col items-center justify-center gap-1 py-2 rounded-2xl transition-all select-none text-[11px] font-semibold leading-none
+                  className={`flex flex-col items-center justify-center gap-0.5 py-1.5 rounded-2xl transition-all select-none text-[10px] font-semibold leading-none
                     ${
                     isActive
                         ? 'text-purple-700' // Active text color for the whole link
@@ -109,11 +109,11 @@ export default function Sidebar() {
                   }`}
                 >
                   <span
-                    className={`p-2 rounded-2xl transition-all ${
+                    className={`p-1.5 rounded-2xl transition-all ${
                       isActive ? 'bg-purple-50 text-purple-700' : 'bg-transparent' // Active background/color for the icon container
                     }`}
                   >
-                    <Icon size={22} /> {/* Standardized icon size */}
+                    <Icon size={18} /> {/* Standardized icon size */}
                   </span>
                   <span>
                     {item.label}
