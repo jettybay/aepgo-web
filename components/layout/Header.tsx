@@ -3,6 +3,8 @@
 import { Bell, MapPin, Calendar } from 'lucide-react';
 import Image from 'next/image';
 
+const currentDate = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+
 export default function Header() {
   return (
     <header className="sticky top-0 z-40 bg-white/90 backdrop-blur border-b px-4 sm:px-8 py-3 sm:py-5 flex items-center justify-between gap-2 sm:gap-4">
@@ -40,8 +42,8 @@ export default function Header() {
 
         {/* Date */}
         <div className="flex items-center gap-1 sm:gap-2 bg-gray-100 px-2 sm:px-4 py-1.5 sm:py-2.5 rounded-xl sm:rounded-2xl">
-          <Calendar size={14} className="sm:w-[18px] text-purple-600" />
-          <span className="font-medium text-[10px] sm:text-base whitespace-nowrap">May 5</span>
+          <Calendar size={14} className="sm:w-[18px] text-purple-600 flex-shrink-0" />
+          <span className="font-medium text-[10px] sm:text-base whitespace-nowrap">{currentDate}</span>
         </div>
 
         {/* Notifications */}
