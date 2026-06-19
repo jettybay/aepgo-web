@@ -21,7 +21,7 @@ export default function SettingsPage() {
                 <div className="grid grid-cols-2 gap-6">
                   <div>
                     <label className="text-sm text-gray-600">Full Name</label>
-                    <input defaultValue="Amina Yusuf" className="w-full mt-2 px-5 py-3 border rounded-2xl" />
+                    <input defaultValue="Amina Shitu" className="w-full mt-2 px-5 py-3 border rounded-2xl" />
                   </div>
                   <div>
                     <label className="text-sm text-gray-600">Phone Number</label>
@@ -35,7 +35,7 @@ export default function SettingsPage() {
                 <div className="grid grid-cols-2 gap-6">
                   <div>
                     <label className="text-sm text-gray-600">Farm Location</label>
-                    <input defaultValue="Kaduna, Nigeria" className="w-full mt-2 px-5 py-3 border rounded-2xl" />
+                    <input defaultValue="Ede, Nigeria" className="w-full mt-2 px-5 py-3 border rounded-2xl" />
                   </div>
                   <div>
                     <label className="text-sm text-gray-600">Main Crops</label>

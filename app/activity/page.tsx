@@ -6,9 +6,9 @@ import Header from '@/components/layout/Header';
 
 const activities = [
   { time: "Today", action: "Solar Irrigation Pump ran for 4.2 hours", impact: "+18.5 kWh", status: "success" },
-  { time: "Yesterday", action: "Maize field harvested - 1.2 tons", impact: "Revenue: €85", status: "success" },
+  { time: "Yesterday", action: "Maize field harvested - 1.2 tons", impact: "Revenue: ₦8,500,000.00", status: "success" },
   { time: "2 days ago", action: "Crop Dryer used for 6 hours", impact: "Dried 450kg", status: "success" },
-  { time: "May 3", action: "Payment of €40.00 received", impact: "Balance updated", status: "success" },
+  { time: "May 3", action: "Payment of ₦4,000,000.00 received", impact: "Balance updated", status: "success" },
 ];
 
 export default function FarmActivity() {
