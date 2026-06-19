@@ -1,7 +1,11 @@
-- [ ] Add missing dashboard-prefixed routes so Sidebar bottom tabs match:
-  - [ ] app/dashboard/activity/page.tsx
-  - [ ] app/dashboard/contracts/page.tsx
-  - [ ] app/dashboard/support/page.tsx
-  - [ ] app/dashboard/settings/page.tsx
-- [ ] Run `npm run build` to verify routing/TypeScript
+# TODO
+
+- [x] Update mobile modal layout in `components/Inventory/page.tsx`
+  - [x] Add safe-area padding and responsive padding
+  - [x] Constrain modal height and enable scrolling for small devices
+  - [x] Improve spacing/stacking for modal sections
+
+- [x] Cleanup and standardize the payment plan dropdown styling/caret in `components/Inventory/page.tsx`
+- [x] Verify type-safety and run lint/build
+
 

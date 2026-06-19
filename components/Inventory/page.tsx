@@ -62,7 +62,7 @@ export default function InventoryPage() {
         name: 'Solar Irrigation Pump',
         category: 'Irrigation',
         price: 650000,
-        depositHint: 'Deposit from 15%',
+        depositHint: 'No upfront deposit (demo pricing)',
         imageSrc: '/images/Solar Irrigation Pump.png',
         highlights: ['Efficient water delivery', 'Low running cost', 'Built for daily field use'],
         specs: [
@@ -77,7 +77,7 @@ export default function InventoryPage() {
         name: 'Solar Flour Mill Machine',
         category: 'Processing',
         price: 980000,
-        depositHint: 'Deposit from 20%',
+        depositHint: 'No upfront deposit (demo pricing)',
         imageSrc: '/images/Solar-flour-mill-machine-1000x1000.jpg',
         highlights: ['Consistent milling output', 'Quiet operation', 'Optimized for small businesses'],
         specs: [
@@ -92,7 +92,7 @@ export default function InventoryPage() {
         name: 'Solar Crop Dryer (Tunnel Dryer)',
         category: 'Drying',
         price: 1250000,
-        depositHint: 'Deposit from 25%',
+        depositHint: 'No upfront deposit (demo pricing)',
         imageSrc:
           '/images/Solar Crop Dryer Grain-Fruit-Vegetable-Fish-Meat-Greenhouse-Dehydrator-Tunnel-Solar-Dryer.webp',
         highlights: ['Faster drying cycles', 'Improved product quality', 'Works across seasons'],
@@ -253,99 +253,140 @@ export default function InventoryPage() {
         <div className="fixed inset-0 z-[60]">
           <div className="absolute inset-0 bg-black/40" onClick={closeModal} />
 
-          <div className="absolute inset-0 flex items-center justify-center p-4">
-            <div className="relative w-full max-w-2xl card p-6 bg-white rounded-[28px] shadow-2xl">
-              <div className="flex items-start justify-between gap-4 mb-4">
-                <div>
-                  <h3 className="text-2xl font-bold">Purchase: {selected.name}</h3>
-                  <p className="text-gray-500 mt-1">Choose plan → Confirm → Continue to payment</p>
+          <div className="absolute inset-0 flex items-end sm:items-center justify-center p-4">
+            <div
+              className="relative w-full max-w-2xl card bg-white rounded-[28px] shadow-2xl overflow-hidden"
+              role="dialog"
+              aria-modal="true"
+              aria-label={`Purchase ${selected.name}`}
+            >
+              {/* Sticky header on small devices */}
+              <div className="px-4 sm:px-6 pt-4 sm:pt-6 pb-3 border-b border-gray-100 bg-white/95 backdrop-blur">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-bold">Purchase: {selected.name}</h3>
+                    <p className="text-gray-500 mt-1 text-xs sm:text-sm">Choose plan → Confirm → Continue to payment</p>
+                  </div>
+                  <button
+                    onClick={closeModal}
+                    className="px-3 py-2 rounded-2xl hover:bg-gray-100 border border-gray-200 text-gray-600 font-semibold"
+                    aria-label="Close"
+                  >
+                    Close
+                  </button>
                 </div>
-                <button
-                  onClick={closeModal}
-                  className="px-3 py-2 rounded-2xl hover:bg-gray-100 border border-gray-200 text-gray-600 font-semibold"
-                  aria-label="Close"
-                >
-                  Close
-                </button>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div className="rounded-3xl bg-gradient-to-br from-purple-50 to-white border border-purple-100 p-4">
-                  <div className="aspect-[16/10] relative rounded-2xl overflow-hidden bg-white">
-                    <Image src={selected.imageSrc} alt={selected.name} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
-                  </div>
-
-                  <div className="mt-4">
-                    <div className="text-xs text-gray-500">Estimated total</div>
-                    <div className="text-3xl font-bold text-purple-700">{computedPrice ? formatNGN(computedPrice) : '-'}</div>
-                    <div className="text-xs text-gray-500 mt-1">Plan multiplier applied to base price (demo).</div>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="rounded-3xl bg-gray-50 border border-gray-100 p-4">
-                    <label className="text-sm font-semibold text-gray-700">Payment plan</label>
-                    <select
-                      className="mt-2 w-full px-4 py-3 bg-white rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-200"
-                      value={modal.plan}
-                      onChange={(e) => setModal((s) => ({ ...s, plan: e.target.value as PlanKey }))}
-                    >
-                      {Object.entries(plans).map(([key, p]) => (
-                        <option key={key} value={key}>
-                          {p.label}
-                        </option>
-                      ))}
-                    </select>
-
-                    <div className="mt-3 text-sm text-gray-600">{plans[modal.plan].note}</div>
-
-                    <div className="mt-4 flex items-center gap-2">
-                      <div className="w-10 h-10 rounded-2xl bg-purple-600/10 flex items-center justify-center text-purple-700">
-                        <PlayCircle size={20} />
+              {/* Scrollable body */}
+              <div className="max-h-[calc(100dvh-96px)] sm:max-h-[calc(100dvh-140px)] overflow-y-auto px-4 sm:px-6 pt-4 pb-6">
+                <div className="pb-[env(safe-area-inset-bottom)]">
+                  <div className="flex flex-col gap-5">
+                    {/* Image + Price (top) */}
+                    <div className="rounded-3xl bg-gradient-to-br from-purple-50 to-white border border-purple-100 p-4">
+                      <div className="aspect-[16/10] relative rounded-2xl overflow-hidden bg-white">
+                        <Image
+                          src={selected.imageSrc}
+                          alt={selected.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          priority
+                        />
                       </div>
-                      <div>
-                        <div className="font-semibold">Purchase steps</div>
-                        <ol className="text-sm text-gray-600 list-decimal ml-5">
-                          <li className="mt-1">Confirm plan and estimated total</li>
-                          <li className="mt-1">Proceed to payment</li>
-                          <li className="mt-1">Get delivery/installation scheduling</li>
-                        </ol>
+
+                      <div className="mt-4">
+                        <div className="text-xs text-gray-500">Estimated total</div>
+                        <div className="text-3xl font-bold text-purple-700">{computedPrice ? formatNGN(computedPrice) : '-'}</div>
+                        <div className="text-xs text-gray-500 mt-1">No upfront deposit pricing (demo).</div>
+                      </div>
+                    </div>
+
+                    {/* Plan & steps (middle) */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="rounded-3xl bg-gray-50 border border-gray-100 p-4">
+                        <label className="text-sm font-semibold text-gray-700">Payment plan</label>
+
+                        <div className="mt-2">
+                          <div className="relative">
+                            <select
+                              className="w-full appearance-none px-4 py-3 bg-white rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-200 pr-10"
+                              value={modal.plan}
+                              onChange={(e) => setModal((s) => ({ ...s, plan: e.target.value as PlanKey }))}
+                            >
+                              {Object.entries(plans).map(([key, p]) => (
+                                <option key={key} value={key}>
+                                  {p.label}
+                                </option>
+                              ))}
+                            </select>
+
+                            {/* Caret (kept inside the wrapper so it stays aligned on small screens) */}
+                            <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 flex items-center justify-center w-6 h-6 text-gray-400">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10l5 5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="mt-3 text-sm text-gray-600">{plans[modal.plan].note}</div>
+
+                        <div className="mt-4 rounded-2xl bg-white border border-gray-100 p-3">
+                          <div className="flex items-center gap-2">
+                            <div className="w-9 h-9 rounded-2xl bg-purple-600/10 flex items-center justify-center text-purple-700">
+                              <PlayCircle size={18} />
+                            </div>
+                            <div>
+                              <div className="font-semibold">Purchase steps</div>
+                              <div className="text-xs text-gray-500">Fast flow (demo)</div>
+                            </div>
+                          </div>
+                          <ol className="mt-2 text-sm text-gray-600 list-decimal ml-5">
+                            <li className="mt-1">Confirm plan and estimated total</li>
+                            <li className="mt-1">Proceed to payment</li>
+                            <li className="mt-1">Get delivery/installation scheduling</li>
+                          </ol>
+                        </div>
+                      </div>
+
+                      <div className="rounded-3xl border border-gray-100 p-4">
+                        <div className="font-semibold">What you get</div>
+                        <ul className="mt-2 space-y-2 text-sm text-gray-600">
+                          {selected.specs.slice(0, 4).map((s) => (
+                            <li key={s.label} className="flex items-start justify-between gap-4">
+                              <span className="text-gray-500">{s.label}</span>
+                              <span className="font-medium text-gray-800 text-right">{s.value}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   </div>
-
-                  <div className="mt-4 rounded-3xl border border-gray-100 p-4">
-                    <div className="font-semibold">What you get</div>
-                    <ul className="mt-2 space-y-2 text-sm text-gray-600">
-                      {selected.specs.slice(0, 4).map((s) => (
-                        <li key={s.label} className="flex items-start justify-between gap-4">
-                          <span className="text-gray-500">{s.label}</span>
-                          <span className="font-medium text-gray-800">{s.value}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
                 </div>
               </div>
 
-              <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                <button
-                  onClick={() => {
-                    // demo behavior
-                    alert('Demo: Continue to payment. In production, this would redirect to /payment with order details.');
-                  }}
-                  className="flex-1 py-4 bg-purple-600 text-white font-semibold rounded-2xl hover:bg-purple-700 transition"
-                >
-                  Continue to payment
-                </button>
-                <button
-                  onClick={() => {
-                    setModal((s) => ({ ...s, plan: 'custom' }));
-                  }}
-                  className="sm:w-56 py-4 border border-gray-300 font-semibold rounded-2xl hover:bg-gray-50 transition"
-                >
-                  Request custom plan
-                </button>
+              {/* Sticky actions */}
+              <div className="px-4 sm:px-6 py-4 border-t border-gray-100 bg-white/95 backdrop-blur">
+                <div className="pb-[env(safe-area-inset-bottom)]">
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <button
+                      onClick={() => {
+                        alert('Demo: Continue to payment. In production, this would redirect to /payment with order details.');
+                      }}
+                      className="flex-1 py-4 bg-purple-600 text-white font-semibold rounded-2xl hover:bg-purple-700 transition"
+                    >
+                      Continue to payment
+                    </button>
+                    <button
+                      onClick={() => {
+                        setModal((s) => ({ ...s, plan: 'custom' }));
+                      }}
+                      className="sm:w-56 py-4 border border-gray-300 font-semibold rounded-2xl hover:bg-gray-50 transition"
+                    >
+                      Request custom plan
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
