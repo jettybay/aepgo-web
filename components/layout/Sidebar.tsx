@@ -79,7 +79,12 @@ export default function Sidebar() {
             <p className="text-purple-200 text-xs mt-1 leading-snug">
               Browse our range of solar productive-use equipment.
             </p>
-            <button className="mt-4 w-full bg-white text-purple-700 font-semibold py-3 rounded-2xl hover:bg-purple-50 transition">
+            <button
+              className="mt-4 w-full bg-white text-purple-700 font-semibold py-3 rounded-2xl hover:bg-purple-50 transition"
+              onClick={() => {
+                window.location.href = '/inventory';
+              }}
+            >
               Browse Equipment
             </button>
           </div>

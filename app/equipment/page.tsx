@@ -58,7 +58,12 @@ export default function EquipmentPage() {
                 <h1 className="text-3xl font-bold">My Equipment</h1>
                 <p className="text-gray-600">Manage and monitor all your solar assets</p>
               </div>
-              <button className="purple-btn flex items-center gap-2">
+              <button
+                className="purple-btn flex items-center gap-2"
+                onClick={() => {
+                  window.location.href = '/inventory';
+                }}
+              >
                 + Add New Equipment
               </button>
             </div>

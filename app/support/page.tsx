@@ -16,7 +16,7 @@ export default function SupportPage() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-10">
               <h1 className="text-3xl font-bold">Support Center</h1>
-              <p className="text-gray-600">We're here to help you power your farm efficiently.</p>
+              <p className="text-gray-600">We&apos;re here to help you power your farm efficiently.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
