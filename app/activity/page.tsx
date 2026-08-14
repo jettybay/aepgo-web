@@ -1,8 +1,6 @@
 'use client';
 
 import React from 'react';
-import Sidebar from '@/components/layout/Sidebar';
-import Header from '@/components/layout/Header';
 
 const activities = [
   { time: "Today", action: "Solar Irrigation Pump ran for 4.2 hours", impact: "+18.5 kWh", status: "success" },
@@ -14,9 +12,7 @@ const activities = [
 export default function FarmActivity() {
   return (
     <div className="flex h-screen bg-gray-50 overflow-hidden">
-      <Sidebar />
       <div className="flex-1 flex flex-col overflow-hidden">
-        <Header />
 
         <main className="flex-1 overflow-auto p-6 lg:p-8">
           <div className="max-w-7xl mx-auto">

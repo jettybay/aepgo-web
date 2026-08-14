@@ -1,26 +1,26 @@
-'use client';
+"use client";
 
-import { Bell, MapPin, Calendar } from 'lucide-react';
-import Image from 'next/image';
+import Image from "next/image";
+import { Bell, MapPin, Calendar } from "lucide-react";
 
-const currentDate = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+const currentDate = new Date().toLocaleDateString("en-US", { month: "short", day: "numeric" });
 
-export default function Header() {
+export function Header() {
   return (
-    <header className="sticky top-0 z-40 bg-white/90 backdrop-blur border-b px-4 sm:px-8 py-3 sm:py-5 flex items-center justify-between gap-2 sm:gap-4">
+    <header className="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-gray-200 px-4 sm:px-8 py-3 sm:py-5 flex items-center justify-between gap-2 sm:gap-4 lg:ml-72">
       {/* Left */}
       <div className="flex items-center gap-2 sm:gap-4 min-w-0 flex-shrink-0">
-        {/* User Initials (Desktop) - Replaces logo when Sidebar is visible */}
+        {/* User Initials (Desktop) */}
         <div className="hidden lg:flex w-11 h-11 bg-purple-100 text-purple-700 font-bold items-center justify-center rounded-2xl text-lg">
           AS
         </div>
 
         {/* Logo (Mobile/Small Devices) */}
-        <Image 
-          src="/images/aepgo-logo.png" 
-          alt="AEPGO Logo" 
-          width={44} 
-          height={44} 
+        <Image
+          src="/images/AEPGo-logo.png"
+          alt="AEPGo Logo"
+          width={44}
+          height={44}
           className="lg:hidden w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-2xl object-contain"
         />
         <div className="min-w-0">
@@ -34,16 +34,18 @@ export default function Header() {
       <div className="flex items-center gap-1.5 sm:gap-6 min-w-0">
         {/* Location */}
         <div className="flex items-center gap-1 sm:gap-2 bg-gray-100 px-2 sm:px-4 py-1.5 sm:py-2.5 rounded-xl sm:rounded-2xl">
-          <MapPin size={14} className="sm:w-[18px] text-purple-600" />
-          <select className="bg-transparent text-[10px] sm:text-base font-medium focus:outline-none cursor-pointer max-w-[50px] sm:max-w-none">
-            <option>Ede, Nigeria</option>
+          <MapPin size={14} className="sm:w-[18px] text-purple-600 flex-shrink-0" />
+          <select className="bg-transparent text-[10px] sm:text-base font-medium focus:outline-none cursor-pointer max-w-[50px] sm:max-w-none text-gray-700">
+            <option>Kano, NG</option>
+            <option>Lagos, NG</option>
+            <option>Kaduna, NG</option>
           </select>
         </div>
 
         {/* Date */}
         <div className="flex items-center gap-1 sm:gap-2 bg-gray-100 px-2 sm:px-4 py-1.5 sm:py-2.5 rounded-xl sm:rounded-2xl">
           <Calendar size={14} className="sm:w-[18px] text-purple-600 flex-shrink-0" />
-          <span className="font-medium text-[10px] sm:text-base whitespace-nowrap">{currentDate}</span>
+          <span className="font-medium text-[10px] sm:text-base whitespace-nowrap text-gray-700">{currentDate}</span>
         </div>
 
         {/* Notifications */}
@@ -57,7 +59,7 @@ export default function Header() {
         {/* Profile details (desktop) */}
         <div className="hidden sm:flex items-center gap-3 flex-shrink-0">
           <div>
-            <p className="font-semibold text-xs sm:text-sm">Amina Shitu</p>
+            <p className="font-semibold text-xs sm:text-sm text-gray-900">Amina Shitu</p>
             <p className="hidden md:block text-xs text-gray-500 -mt-0.5">Farm Owner</p>
           </div>
         </div>
