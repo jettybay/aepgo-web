@@ -38,7 +38,7 @@ export function Sidebar() {
         </div>
         <div>
           <h1 className="text-2xl font-bold tracking-tight">AEPGo</h1>
-          <p className="text-purple-200 text-xs -mt-1">Agro-Energy</p>
+          <p className="text-purple-200 text-xs -mt-1">Agro-Energy Pay-as-you-Go</p>
         </div>
       </div>
 
