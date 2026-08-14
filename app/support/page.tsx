@@ -5,11 +5,7 @@ import { Phone, MessageSquare, ChevronRight, HelpCircle } from 'lucide-react';
 
 export default function SupportPage() {
   return (
-    <div className="flex h-screen bg-gray-50 overflow-hidden">
-      <div className="flex-1 flex flex-col overflow-hidden">
-
-        <main className="flex-1 overflow-auto p-6 lg:p-8 pb-32">
-          <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto">
             <div className="mb-10">
               <h1 className="text-3xl font-bold">Support Center</h1>
               <p className="text-gray-600">We&apos;re here to help you power your farm efficiently.</p>
@@ -49,9 +45,6 @@ export default function SupportPage() {
                 ))}
               </div>
             </div>
-          </div>
-        </main>
-      </div>
     </div>
   );
 }

@@ -15,8 +15,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen bg-gray-50 font-sans text-gray-900 antialiased">
         <Sidebar />
         <Header />
-        <main className="lg:ml-72 pb-20 lg:pb-6">
-          <div className="mx-auto max-w-full px-4 sm:px-8 py-6">{children}</div>
+        <main className="lg:ml-72 pb-28 lg:pb-20">
+          <div className="mx-auto max-w-full px-4 sm:px-8 py-6 pb-8">{children}</div>
         </main>
         <MobileNav />
       </body>

@@ -51,12 +51,7 @@ export default function AIAdvisor() {
   };
 
   return (
-    <div className="flex h-screen bg-gray-50 overflow-hidden">
-      
-      <div className="flex-1 flex flex-col overflow-hidden">
-
-        <main className="flex-1 overflow-auto p-6 lg:p-8 pb-32">
-          <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-end mb-8">
               <div>
                 <h1 className="text-3xl font-bold">AI Farm Advisor</h1>
@@ -77,7 +72,7 @@ export default function AIAdvisor() {
                 <div className="card p-6">
 <h3 className="font-semibold text-lg mb-5">Today&apos;s Recommendations</h3>
                   
-                  <div className="space-y-3 max-h-[calc(100vh-260px)] overflow-auto">
+                  <div className="space-y-3">
                     {recommendations.map((rec, index) => (
                       <div
                         key={index}
@@ -141,9 +136,6 @@ export default function AIAdvisor() {
                 </div>
               </div>
             </div>
-          </div>
-        </main>
-      </div>
     </div>
   );
 }

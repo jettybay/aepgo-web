@@ -4,11 +4,7 @@ import React from 'react';
 
 export default function SettingsPage() {
   return (
-    <div className="flex h-screen bg-gray-50 overflow-hidden">
-      <div className="flex-1 flex flex-col overflow-hidden">
-
-        <main className="flex-1 overflow-auto p-6 lg:p-8">
-          <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto">
             <h1 className="text-3xl font-bold mb-8">Settings</h1>
 
             <div className="card p-8 space-y-10">
@@ -44,9 +40,6 @@ export default function SettingsPage() {
                 <button className="purple-btn w-full py-4">Save Changes</button>
               </div>
             </div>
-          </div>
-        </main>
-      </div>
     </div>
   );
 }

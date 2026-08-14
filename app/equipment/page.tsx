@@ -43,12 +43,7 @@ export default function EquipmentPage() {
   const [selectedEquipment, setSelectedEquipment] = useState(equipmentList[0]);
 
   return (
-    <div className="flex h-screen bg-gray-50 overflow-hidden">
-      
-      <div className="flex-1 flex flex-col overflow-hidden">
-
-        <main className="flex-1 overflow-auto p-6 lg:p-8 pb-32">
-          <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-center mb-8">
               <div>
                 <h1 className="text-3xl font-bold">My Equipment</h1>
@@ -76,7 +71,7 @@ export default function EquipmentPage() {
                     />
                   </div>
 
-                  <div className="space-y-4 max-h-[calc(100vh-280px)] overflow-auto pr-2">
+                  <div className="space-y-4 lg:max-h-[70vh] lg:overflow-auto lg:pr-2">
                     {equipmentList.map((eq) => (
                       <div
                         key={eq.id}
@@ -147,9 +142,6 @@ export default function EquipmentPage() {
                 </div>
               </div>
             </div>
-          </div>
-        </main>
-      </div>
     </div>
   );
 }

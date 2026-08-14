@@ -2,6 +2,17 @@
 /* stylelint-disable at-rule-no-unknown */
 @import "tailwindcss";
 
+@theme {
+  /* Bottom clearance so the fixed MobileNav never covers the end of a page.
+     MobileNav pill (~72px) + its 16px margin + breathing room + iOS home bar. */
+  --spacing-nav-safe: calc(9rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* Respects the device's bottom safe area (iOS home indicator). */
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
 @layer base {
   body {
     font-family: 'Inter', system_ui, sans-serif;

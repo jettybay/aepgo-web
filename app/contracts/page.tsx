@@ -10,11 +10,7 @@ const contracts = [
 
 export default function ContractsPage() {
   return (
-    <div className="flex h-screen bg-gray-50 overflow-hidden">
-      <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
-
-        <main className="flex-1 overflow-auto p-4 md:p-8 pb-32">
-          <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto min-w-0">
             <h1 className="text-3xl font-bold mb-2">Contracts</h1>
             <p className="text-gray-600 mb-8">All your agreements and financing contracts</p>
             
@@ -90,9 +86,6 @@ export default function ContractsPage() {
                 </table>
               </div>
             </div>
-          </div>
-        </main>
-      </div>
     </div>
   );
 }

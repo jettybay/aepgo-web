@@ -8,7 +8,16 @@ export const traders = [
   "Zainab Ali — Kano Wholesale",
 ];
 
-export const commodities = ["Tomatoes", "Onions", "Peppers", "Ginger"];
+export const commodities = ["Tomatoes", "Onions", "Peppers"];
+
+// Commodity image URLs for marketplace
+const UNSPLASH_PARAMS = "auto=format&fit=crop&w=200&q=70";
+export const commodityImages: Record<string, string> = {
+  Tomatoes: `https://images.unsplash.com/photo-1582284540020-8acbe03f4924?${UNSPLASH_PARAMS}`,
+  Onions: `https://images.unsplash.com/photo-1683355739329-cea18ba93f02?${UNSPLASH_PARAMS}`,
+  Peppers: `https://images.unsplash.com/photo-1601648764658-cf37e8c89b70?${UNSPLASH_PARAMS}`,
+ 
+};
 
 export const hubNames = ["Kano Hub", "Kaduna Hub", "Lagos Hub", "Ibadan Hub"];
 
@@ -100,17 +109,7 @@ export const initialTransactions: Transaction[] = [
     hub: "Kano Hub",
     status: "Confirmed",
   },
-  {
-    id: 1005,
-    time: "11:30",
-    trader: "Zainab Ali — Kano Wholesale",
-    commodity: "Ginger",
-    qty: 15,
-    price: 18000,
-    grade: "A",
-    hub: "Kaduna Hub",
-    status: "Confirmed",
-  },
+ 
 ];
 
 export const initialInventory: InventoryItem[] = [
@@ -215,16 +214,6 @@ export const sellListings: SellListing[] = [
     qty: 120,
     price: 12500,
     posted: "1 hour ago",
-  },
-  {
-    id: "SL002",
-    commodity: "Ginger",
-    grade: "A",
-    seller: "Zainab Ali",
-    hub: "Kaduna Hub",
-    qty: 60,
-    price: 18000,
-    posted: "3 hours ago",
   },
   {
     id: "SL003",

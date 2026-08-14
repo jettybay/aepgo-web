@@ -27,7 +27,7 @@ export function MobileNav() {
       <div className="h-20 bg-gradient-to-t from-black/40 via-black/0 to-black/0 pointer-events-none" />
 
       {/* Navigation bar */}
-      <div className="mx-4 mb-4 rounded-3xl bg-white shadow-2xl border border-gray-200">
+      <div className="mx-4 mb-4 pb-safe rounded-3xl bg-white shadow-2xl border border-gray-200">
         <div className="flex items-center justify-around py-3">
           {menuItems.map((item) => {
             const isActive = pathname === item.href;

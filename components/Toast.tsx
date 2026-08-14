@@ -18,7 +18,7 @@ export function Toast({ message, visible, onClose, duration = 3000 }: ToastProps
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 animate-in fade-in slide-in-from-bottom-2 rounded-lg bg-gray-900 px-4 py-3 text-sm font-medium text-white shadow-lg flex items-center gap-2">
+    <div className="fixed bottom-nav-safe right-4 z-50 lg:bottom-4 animate-in fade-in slide-in-from-bottom-2 rounded-lg bg-gray-900 px-4 py-3 text-sm font-medium text-white shadow-lg flex items-center gap-2">
       <span>{message}</span>
       <button
         onClick={onClose}

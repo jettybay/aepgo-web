@@ -10,12 +10,7 @@ const recentPayments = [
 
 export default function PaymentsPage() {
   return (
-    <div className="flex h-screen bg-gray-50 overflow-hidden">
-      
-      <div className="flex-1 flex flex-col overflow-hidden">
-
-        <main className="flex-1 overflow-auto p-6 lg:p-8 pb-32">
-          <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto">
             <div className="mb-8">
               <h1 className="text-3xl font-bold">Payments</h1>
               <p className="text-gray-600">Manage your Pay-As-You-Go repayments</p>
@@ -88,9 +83,6 @@ export default function PaymentsPage() {
                 </div>
               </div>
             </div>
-          </div>
-        </main>
-      </div>
     </div>
   );
 }

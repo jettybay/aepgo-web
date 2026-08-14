@@ -1,7 +1,7 @@
 "use client";
 
 import { formatNaira } from "@/lib/utils";
-import { buyOrders, sellListings } from "@/lib/data";
+import { buyOrders, sellListings, commodityImages } from "@/lib/data";
 
 export default function MarketplacePage() {
   return (
@@ -21,13 +21,23 @@ export default function MarketplacePage() {
               key={i}
               className="flex flex-col gap-3 rounded-xl border border-gray-200 bg-white p-4 sm:flex-row sm:items-center sm:justify-between"
             >
-              <div>
-                <p className="font-medium text-gray-900">
-                  {o.commodity} · Grade {o.grade}
-                </p>
-                <p className="text-sm text-gray-500">
-                  {o.buyer} · {o.location} · {o.qty} crates
-                </p>
+              <div className="flex gap-4 items-start flex-1">
+                <img
+                  src={commodityImages[o.commodity] || commodityImages.Tomatoes}
+                  alt={o.commodity}
+                  width={80}
+                  height={80}
+                  className="h-20 w-20 rounded-lg object-cover flex-shrink-0"
+                  loading="lazy"
+                />
+                <div>
+                  <p className="font-medium text-gray-900">
+                    {o.commodity} · Grade {o.grade}
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    {o.buyer} · {o.location} · {o.qty} crates
+                  </p>
+                </div>
               </div>
               <div className="flex items-center gap-4">
                 <p className="text-lg font-semibold tabular-nums text-gray-900">
@@ -51,13 +61,23 @@ export default function MarketplacePage() {
               key={i}
               className="flex flex-col gap-3 rounded-xl border border-gray-200 bg-white p-4 sm:flex-row sm:items-center sm:justify-between"
             >
-              <div>
-                <p className="font-medium text-gray-900">
-                  {s.commodity} · Grade {s.grade}
-                </p>
-                <p className="text-sm text-gray-500">
-                  {s.seller} · {s.hub} · {s.qty} crates available
-                </p>
+              <div className="flex gap-4 items-start flex-1">
+                <img
+                  src={commodityImages[s.commodity] || commodityImages.Tomatoes}
+                  alt={s.commodity}
+                  width={80}
+                  height={80}
+                  className="h-20 w-20 rounded-lg object-cover flex-shrink-0"
+                  loading="lazy"
+                />
+                <div>
+                  <p className="font-medium text-gray-900">
+                    {s.commodity} · Grade {s.grade}
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    {s.seller} · {s.hub} · {s.qty} crates available
+                  </p>
+                </div>
               </div>
               <div className="flex items-center gap-4">
                 <p className="text-lg font-semibold tabular-nums text-gray-900">
