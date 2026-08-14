@@ -147,14 +147,6 @@ export const initialInventory: InventoryItem[] = [
     condition: "Good",
   },
   {
-    hub: "Kaduna Hub",
-    commodity: "Ginger",
-    qty: 60,
-    grade: "A",
-    days: 12,
-    condition: "Good",
-  },
-  {
     hub: "Lagos Hub",
     commodity: "Tomatoes",
     qty: 150,

@@ -8,6 +8,19 @@
   }
 }
 
+@keyframes carousel-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@utility animate-carousel-progress {
+  animation: carousel-progress var(--carousel-duration, 3000ms) linear forwards;
+}
+
 @layer components {
   .card {
     @apply bg-white rounded-3xl border border-gray-100 shadow-sm;

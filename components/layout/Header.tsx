@@ -17,7 +17,7 @@ export function Header() {
 
         {/* Logo (Mobile/Small Devices) */}
         <Image
-          src="/images/AEPGo-logo.png"
+          src="/images/aepgo-logo.png"
           alt="AEPGo Logo"
           width={44}
           height={44}

@@ -3,7 +3,9 @@
 import { GradeBadge } from "@/components/GradeBadge";
 import { StatusBadge } from "@/components/StatusBadge";
 import { KpiCard } from "@/components/KpiCard";
+import { ImageCarousel } from "@/components/ImageCarousel";
 import { initialInventory } from "@/lib/data";
+import { inventoryGallery } from "@/lib/gallery";
 
 export default function InventoryPage() {
   const gradeA = initialInventory.filter((i) => i.grade === "A").reduce((s, i) => s + i.qty, 0);
@@ -13,6 +15,8 @@ export default function InventoryPage() {
   return (
     <div className="space-y-6">
       <h1 className="text-xl font-semibold text-gray-900">Inventory</h1>
+
+      <ImageCarousel slides={inventoryGallery} intervalMs={3000} className="mx-auto max-w-3xl" />
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <KpiCard label="Grade A" value={gradeA} unit="crates" />
