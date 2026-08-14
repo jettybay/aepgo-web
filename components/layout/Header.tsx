@@ -59,7 +59,7 @@ export function Header() {
         {/* Profile details (desktop) */}
         <div className="hidden sm:flex items-center gap-3 flex-shrink-0">
           <div>
-            <p className="font-semibold text-xs sm:text-sm text-gray-900">Amina Shitu</p>
+            <p className="font-semibold text-xs sm:text-sm text-gray-900">Amina </p>
             <p className="hidden md:block text-xs text-gray-500 -mt-0.5">Farm Owner</p>
           </div>
         </div>
