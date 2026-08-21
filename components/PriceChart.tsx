@@ -32,7 +32,7 @@ export function PriceChart() {
           }}
           labelStyle={{ color: "#374151" }}
         />
-        <Bar dataKey="price" fill="#1f2937" radius={[4, 4, 0, 0]} />
+        <Bar dataKey="price" fill="#d89a08" radius={[4, 4, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   );

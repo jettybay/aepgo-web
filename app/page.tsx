@@ -21,7 +21,7 @@ export default function DashboardPage() {
         </div>
         <Link
           href="/transactions"
-          className="inline-flex items-center gap-2 rounded-lg bg-gray-900 px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
+          className="gold-btn inline-flex items-center gap-2"
         >
           <Plus size={16} />
           Record trade
@@ -35,7 +35,7 @@ export default function DashboardPage() {
         <KpiCard label="Loss rate (7d)" value={4.2} unit="%" delta="↓ from 48% market avg" deltaType="up" />
       </div>
 
-      <div className="rounded-xl border border-gray-200 bg-white p-5">
+      <div className="rounded-xl border border-amber-200 bg-white p-5 shadow-sm">
         <h2 className="text-sm font-semibold text-gray-900">Price trend — Tomatoes (₦/basket)</h2>
         <div className="mt-4">
           <PriceChart />

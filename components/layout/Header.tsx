@@ -11,7 +11,7 @@ export function Header() {
       {/* Left */}
       <div className="flex items-center gap-2 sm:gap-4 min-w-0 flex-shrink-0">
         {/* User Initials (Desktop) */}
-        <div className="hidden lg:flex w-11 h-11 bg-purple-100 text-purple-700 font-bold items-center justify-center rounded-2xl text-lg">
+        <div className="hidden lg:flex w-11 h-11 bg-amber-100 text-green-900 font-bold items-center justify-center rounded-2xl text-lg">
           AS
         </div>
 
@@ -33,18 +33,14 @@ export function Header() {
       {/* Right */}
       <div className="flex items-center gap-1.5 sm:gap-6 min-w-0">
         {/* Location */}
-        <div className="flex items-center gap-1 sm:gap-2 bg-gray-100 px-2 sm:px-4 py-1.5 sm:py-2.5 rounded-xl sm:rounded-2xl">
-          <MapPin size={14} className="sm:w-[18px] text-purple-600 flex-shrink-0" />
-          <select className="bg-transparent text-[10px] sm:text-base font-medium focus:outline-none cursor-pointer max-w-[50px] sm:max-w-none text-gray-700">
-            <option>Kano, NG</option>
-            <option>Lagos, NG</option>
-            <option>Kaduna, NG</option>
-          </select>
+        <div className="flex items-center gap-1 sm:gap-2 bg-amber-100 px-2 sm:px-4 py-1.5 sm:py-2.5 rounded-xl sm:rounded-2xl">
+          <MapPin size={14} className="sm:w-[18px] text-amber-800 flex-shrink-0" />
+          <span className="text-[10px] sm:text-base font-medium text-gray-700">Kano, NG</span>
         </div>
 
         {/* Date */}
-        <div className="flex items-center gap-1 sm:gap-2 bg-gray-100 px-2 sm:px-4 py-1.5 sm:py-2.5 rounded-xl sm:rounded-2xl">
-          <Calendar size={14} className="sm:w-[18px] text-purple-600 flex-shrink-0" />
+        <div className="flex items-center gap-1 sm:gap-2 bg-amber-50 px-2 sm:px-4 py-1.5 sm:py-2.5 rounded-xl sm:rounded-2xl">
+          <Calendar size={14} className="sm:w-[18px] text-amber-800 flex-shrink-0" />
           <span className="font-medium text-[10px] sm:text-base whitespace-nowrap text-gray-700">{currentDate}</span>
         </div>
 
@@ -60,7 +56,7 @@ export function Header() {
         <div className="hidden sm:flex items-center gap-3 flex-shrink-0">
           <div>
             <p className="font-semibold text-xs sm:text-sm text-gray-900">Amina Smith</p>
-            <p className="hidden md:block text-xs text-gray-500 -mt-0.5">Farm Owner</p>
+            <p className="hidden md:block text-xs text-gray-500 -mt-0.5">Hub Owner</p>
           </div>
         </div>
       </div>

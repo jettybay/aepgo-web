@@ -2,9 +2,9 @@ import type { Transaction, InventoryItem, Hub, BuyOrder, SellListing } from "@/t
 
 export const traders = [
   "Ade Ogunleye — Kano Market",
-  "Emi Agunwamba — Kaduna Depot",
+  "Emi Agunwamba — Kaduna Hub",
   "Toyin Adekunle — Lagos Hub",
-  "Hassan Usman — Katsina Farm",
+  "Hassan Usman — Katsina Hub",
   "Zainab Ali — Kano Wholesale",
 ];
 
@@ -19,7 +19,7 @@ export const commodityImages: Record<string, string> = {
  
 };
 
-export const hubNames = ["Kano Hub", "Kaduna Hub", "Lagos Hub", "Ibadan Hub"];
+export const hubNames = ["Kano Hub"];
 
 export const hubs: Hub[] = [
   {
@@ -31,36 +31,6 @@ export const hubs: Hub[] = [
     solar: 78,
     capacity: 500,
     used: 340,
-  },
-  {
-    name: "Kaduna Hub",
-    location: "Kaduna Central, Kaduna State",
-    status: "Operational",
-    temp: 22,
-    humidity: 72,
-    solar: 62,
-    capacity: 450,
-    used: 295,
-  },
-  {
-    name: "Lagos Hub",
-    location: "Ikorodu, Lagos State",
-    status: "Operational",
-    temp: 28,
-    humidity: 80,
-    solar: 45,
-    capacity: 600,
-    used: 420,
-  },
-  {
-    name: "Ibadan Hub",
-    location: "Bodija Market, Oyo State",
-    status: "Operational",
-    temp: 26,
-    humidity: 75,
-    solar: 71,
-    capacity: 400,
-    used: 280,
   },
 ];
 
@@ -101,7 +71,7 @@ export const initialTransactions: Transaction[] = [
   {
     id: 1004,
     time: "12:55",
-    trader: "Hassan Usman — Katsina Farm",
+    trader: "Hassan Usman — Katsina Hub",
     commodity: "Tomatoes",
     qty: 40,
     price: 11500,

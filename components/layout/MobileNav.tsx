@@ -27,7 +27,7 @@ export function MobileNav() {
       <div className="h-20 bg-gradient-to-t from-black/40 via-black/0 to-black/0 pointer-events-none" />
 
       {/* Navigation bar */}
-      <div className="mx-4 mb-4 pb-safe rounded-3xl bg-white shadow-2xl border border-gray-200">
+      <div className="mx-4 mb-4 pb-safe rounded-3xl bg-gradient-to-r from-amber-400 to-amber-500 shadow-2xl border border-amber-300">
         <div className="flex items-center justify-around py-3">
           {menuItems.map((item) => {
             const isActive = pathname === item.href;
@@ -38,8 +38,8 @@ export function MobileNav() {
                 href={item.href}
                 className={`flex flex-col items-center gap-1.5 px-3 py-2 rounded-2xl transition-all ${
                   isActive
-                    ? "text-purple-700"
-                    : "text-gray-600 hover:text-gray-900"
+                    ? "text-green-950 font-bold"
+                    : "text-green-950/70 hover:text-green-950"
                 }`}
               >
                 <Icon size={24} />

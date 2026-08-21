@@ -17,14 +17,14 @@ export default function PaymentsPage() {
             </div>
 
             {/* Outstanding Balance */}
-            <div className="bg-gradient-to-br from-purple-600 to-purple-800 text-white rounded-3xl p-8 mb-8 shadow-xl shadow-purple-200">
+            <div className="bg-gradient-to-br from-green-800 to-green-950 text-white rounded-3xl p-8 mb-8 shadow-xl shadow-green-900/20">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                 <div>
-                  <p className="text-purple-100 font-medium">Total Outstanding Balance</p>
+                  <p className="text-amber-100 font-medium">Total Outstanding Balance</p>
                   <p className="text-4xl md:text-5xl font-bold mt-2">₦3,745,200.50</p>
                   <p className="mt-2">Next payment due: <span className="font-medium">15 May 2026</span></p>
                 </div>
-                <button className="bg-white text-purple-700 px-10 py-4 rounded-2xl font-semibold hover:bg-purple-50 transition">
+                <button className="bg-white text-green-900 px-10 py-4 rounded-2xl font-semibold hover:bg-amber-50 transition">
                   Make Payment
                 </button>
               </div>
@@ -36,13 +36,13 @@ export default function PaymentsPage() {
                 <h3 className="text-xl font-semibold mb-6">Make a Payment</h3>
                 
                 <div className="space-y-4">
-                  <div className="p-5 border-2 border-gray-100 rounded-2xl hover:border-purple-300 hover:bg-purple-50/50 transition-all cursor-pointer">
+                  <div className="p-5 border-2 border-gray-100 rounded-2xl hover:border-amber-300 hover:bg-amber-50/50 transition-all cursor-pointer">
                     💳 Pay with Card (Paystack)
                   </div>
-                  <div className="p-5 border-2 border-gray-100 rounded-2xl hover:border-purple-300 hover:bg-purple-50/50 transition-all cursor-pointer">
+                  <div className="p-5 border-2 border-gray-100 rounded-2xl hover:border-amber-300 hover:bg-amber-50/50 transition-all cursor-pointer">
                     📱 Pay with USSD
                   </div>
-                  <div className="p-5 border-2 border-gray-100 rounded-2xl hover:border-purple-300 hover:bg-purple-50/50 transition-all cursor-pointer">
+                  <div className="p-5 border-2 border-gray-100 rounded-2xl hover:border-amber-300 hover:bg-amber-50/50 transition-all cursor-pointer">
                     💰 Bank Transfer
                   </div>
                 </div>
@@ -52,7 +52,7 @@ export default function PaymentsPage() {
                   <input 
                     type="number" 
                     defaultValue="150000" 
-                    className="w-full px-5 py-4 text-2xl font-bold border-2 border-gray-100 rounded-2xl focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-500/10 transition-all"
+                    className="w-full px-5 py-4 text-2xl font-bold border-2 border-gray-100 rounded-2xl focus:outline-none focus:border-amber-500 focus:ring-4 focus:ring-amber-500/10 transition-all"
                   />
                   <button className="w-full mt-6 purple-btn text-lg py-4">
                     Proceed to Payment
@@ -64,7 +64,7 @@ export default function PaymentsPage() {
               <div className="card p-8">
                 <div className="flex justify-between mb-6">
                   <h3 className="text-xl font-semibold">Recent Payments</h3>
-                  <button className="text-purple-600 text-sm hover:underline">View all</button>
+                  <button className="text-green-800 text-sm hover:underline">View all</button>
                 </div>
 
                 <div className="space-y-5">

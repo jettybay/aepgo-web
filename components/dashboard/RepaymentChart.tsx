@@ -23,7 +23,7 @@ export default function RepaymentChart() {
               cy="50" 
               r="45" 
               fill="none" 
-              stroke="#7c3aed" 
+              stroke="#166534" 
               strokeWidth="10" 
               strokeDasharray="282.74" 
               strokeDashoffset="107.44" 
@@ -33,7 +33,7 @@ export default function RepaymentChart() {
 
           {/* Center Content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <p className="text-6xl font-bold text-purple-600">62%</p>
+            <p className="text-6xl font-bold text-green-800">62%</p>
             <p className="text-sm text-gray-500 -mt-1">Paid</p>
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function RepaymentChart() {
         </div>
         <div className="flex justify-between">
           <span className="text-gray-600">Remaining</span>
-          <span className="font-medium text-purple-600">₦1,280,000.00</span>
+          <span className="font-medium text-green-800">₦1,280,000.00</span>
         </div>
       </div>
 

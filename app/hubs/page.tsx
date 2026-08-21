@@ -1,6 +1,6 @@
 "use client";
 
-import { Thermometer, Droplets, Sun } from "lucide-react";
+import { Thermometer, Droplets, Sun, MapPin, Wifi, ShieldCheck } from "lucide-react";
 import { Badge } from "@/components/Badge";
 import { StatusBadge } from "@/components/StatusBadge";
 import { hubs } from "@/lib/data";
@@ -39,18 +39,26 @@ export default function HubsPage() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-xl font-semibold text-gray-900">Smart Hubs</h1>
+      <div>
+        <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-amber-700">
+          <Wifi size={16} /> Connected IoT
+        </div>
+        <h1 className="mt-2 text-2xl font-semibold text-green-950">My Smart Hub</h1>
+        <p className="mt-1 text-sm text-gray-500">One connected smart hub for your operation in Kano, Nigeria.</p>
+      </div>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4">
         {hubs.map((h) => {
           const pct = Math.round((h.used / h.capacity) * 100);
           return (
-            <div key={h.name} className="rounded-xl border border-gray-200 bg-white p-5">
+            <div key={h.name} className="rounded-2xl border border-amber-300 bg-white p-5 shadow-sm">
               <div className="flex items-center justify-between">
-                <h3 className="font-semibold text-gray-900">{h.name}</h3>
+                <div>
+                  <h3 className="font-semibold text-green-950">{h.name}</h3>
+                  <p className="mt-1 flex items-center gap-1.5 text-sm text-gray-500"><MapPin size={14} className="text-amber-600" />{h.location}</p>
+                </div>
                 <Badge variant="green">{h.status}</Badge>
               </div>
-              <p className="mt-1 text-sm text-gray-500">{h.location}</p>
 
               <div className="mt-4 flex gap-6 text-sm text-gray-600">
                 <span className="flex items-center gap-1.5">
@@ -76,7 +84,7 @@ export default function HubsPage() {
                 </div>
                 <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-gray-100">
                   <div
-                    className="h-full rounded-full bg-blue-600 transition-all"
+                    className="h-full rounded-full bg-amber-500 transition-all"
                     style={{ width: `${pct}%` }}
                   />
                 </div>
@@ -87,8 +95,14 @@ export default function HubsPage() {
       </div>
 
       <div>
-        <h2 className="mb-3 text-sm font-semibold text-gray-900">IoT sensor readings</h2>
-        <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
+        <div className="mb-3 flex items-center justify-between gap-3">
+          <div>
+            <h2 className="text-sm font-semibold text-green-950">Live sensor readings</h2>
+            <p className="mt-1 text-xs text-gray-500">Monitoring Kano Hub in real time</p>
+          </div>
+          <ShieldCheck size={20} className="text-amber-600" />
+        </div>
+        <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
           <table className="w-full text-sm">
             <thead>
               <tr className="bg-gray-50 text-left text-xs font-medium text-gray-500">

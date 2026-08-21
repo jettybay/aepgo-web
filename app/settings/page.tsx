@@ -23,10 +23,10 @@ export default function SettingsPage() {
               </div>
 
               <div>
-                <h3 className="font-semibold mb-4">Farm Details</h3>
+                <h3 className="font-semibold mb-4">Hub Details</h3>
                 <div className="grid grid-cols-2 gap-6">
                   <div>
-                    <label className="text-sm text-gray-600">Farm Location</label>
+                    <label className="text-sm text-gray-600">Hub Location</label>
                     <input defaultValue="Ede, Nigeria" className="w-full mt-2 px-5 py-3 border rounded-2xl" />
                   </div>
                   <div>

@@ -17,16 +17,16 @@ const menuItems = [
   { icon: TrendingUp, label: "Transactions", href: "/transactions" },
   { icon: Package, label: "Inventory", href: "/inventory" },
   { icon: ShoppingCart, label: "Marketplace", href: "/marketplace" },
-  { icon: Zap, label: "Smart Hubs", href: "/hubs" },
+  { icon: Zap, label: "My Smart Hub", href: "/hubs" },
 ];
 
 export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="hidden lg:flex w-72 bg-gradient-to-b from-purple-700 to-purple-800 text-white flex-col h-screen fixed left-0 top-0">
+    <div className="hidden lg:flex w-72 bg-gradient-to-b from-amber-400 via-amber-500 to-amber-600 text-green-950 flex-col h-screen fixed left-0 top-0">
       {/* Logo */}
-      <div className="p-6 flex items-center gap-3 border-b border-purple-600">
+      <div className="p-6 flex items-center gap-3 border-b border-amber-300/80">
         <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center flex-shrink-0">
           <Image
             src="/images/aepgo-logo.png"
@@ -37,8 +37,8 @@ export function Sidebar() {
           />
         </div>
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">AEPGo</h1>
-          <p className="text-purple-200 text-xs -mt-1">Agro-Energy Pay-as-you-Go</p>
+          <h1 className="text-2xl font-bold tracking-tight text-green-950">AEPGo</h1>
+          <p className="text-green-900/75 text-xs -mt-1">Agro-Energy Pay-as-you-Go</p>
         </div>
       </div>
 
@@ -53,8 +53,8 @@ export function Sidebar() {
               href={item.href}
               className={`flex items-center gap-3 px-5 py-3.5 rounded-2xl text-[15px] transition-all ${
                 isActive
-                  ? "bg-white text-purple-700 font-semibold shadow-lg"
-                  : "text-purple-100 hover:bg-purple-600"
+                  ? "bg-green-950 text-white font-semibold shadow-lg"
+                  : "text-green-950 hover:bg-amber-300"
               }`}
             >
               <Icon size={22} />
@@ -65,24 +65,24 @@ export function Sidebar() {
       </nav>
 
       {/* Bottom Promo */}
-      <div className="p-6 border-t border-purple-600 mt-auto">
-        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-5 text-sm border border-purple-500/20">
-          <p className="font-semibold text-white">Smart Hub Network</p>
-          <p className="text-purple-200 text-xs mt-2 leading-snug">
-            Monitor 4 automated storage hubs with real-time IoT sensors.
+      <div className="p-6 border-t border-amber-300/80 mt-auto">
+        <div className="bg-white/35 backdrop-blur-sm rounded-3xl p-5 text-sm border border-white/50">
+          <p className="font-semibold text-green-950">Smart Hub Network</p>
+            <p className="text-green-900/75 text-xs mt-2 leading-snug">
+            Monitor your automated storage hub with real-time IoT sensors.
           </p>
           <Link
             href="/hubs"
-            className="mt-4 w-full bg-white text-purple-700 font-semibold py-3 rounded-2xl hover:bg-purple-50 transition block text-center"
+            className="mt-4 w-full bg-green-950 text-white font-semibold py-3 rounded-2xl hover:bg-green-900 transition block text-center"
           >
-            View Hubs
+            Open Smart Hub
           </Link>
         </div>
       </div>
 
       {/* Logout (Bottom) */}
-      <div className="p-6 border-t border-purple-600">
-        <button className="flex items-center gap-3 w-full px-4 py-3 text-purple-100 hover:text-white hover:bg-purple-600 rounded-xl transition">
+      <div className="p-6 border-t border-amber-300/80">
+        <button className="flex items-center gap-3 w-full px-4 py-3 text-green-950/80 hover:text-green-950 hover:bg-amber-300 rounded-xl transition">
           <LogOut size={20} />
           <span className="text-sm font-medium">Logout</span>
         </button>

@@ -18,10 +18,10 @@ export default function ContractsPage() {
               {/* Mobile View: Card List */}
               <div className="md:hidden space-y-4">
                 {contracts.map((contract) => (
-                  <div key={contract.id} className="p-5 border border-gray-100 rounded-2xl bg-white shadow-sm hover:border-purple-200 transition-all active:scale-[0.98]">
+                  <div key={contract.id} className="p-5 border border-gray-100 rounded-2xl bg-white shadow-sm hover:border-amber-200 transition-all active:scale-[0.98]">
                     <div className="flex justify-between items-start mb-4">
                       <div>
-                        <p className="text-[10px] font-bold text-purple-500 uppercase tracking-widest mb-1">{contract.id}</p>
+                        <p className="text-[10px] font-bold text-amber-600 uppercase tracking-widest mb-1">{contract.id}</p>
                         <h4 className="font-bold text-gray-900 leading-tight">{contract.type}</h4>
                       </div>
                       <span className={`px-3 py-1.5 rounded-full text-xs font-bold ${
@@ -42,7 +42,7 @@ export default function ContractsPage() {
                         <p className="text-sm font-bold text-gray-700">{contract.endDate}</p>
                       </div>
                     </div>
-                    <button className="w-full mt-5 py-3.5 text-sm font-bold text-purple-700 bg-purple-50 rounded-xl hover:bg-purple-100 transition-colors">
+                    <button className="w-full mt-5 py-3.5 text-sm font-bold text-green-900 bg-amber-50 rounded-xl hover:bg-amber-100 transition-colors">
                       View Details
                     </button>
                   </div>
@@ -78,7 +78,7 @@ export default function ContractsPage() {
                           </span>
                         </td>
                         <td>
-                          <button className="text-purple-600 hover:underline">View</button>
+                          <button className="text-green-800 hover:underline">View</button>
                         </td>
                       </tr>
                     ))}

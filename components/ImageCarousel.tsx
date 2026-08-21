@@ -59,7 +59,7 @@ export function ImageCarousel({ slides, intervalMs = 3000, className }: ImageCar
       aria-roledescription="carousel"
       className={cn(
         "group relative w-full overflow-hidden rounded-2xl bg-gray-900 shadow-sm ring-1 ring-black/5",
-        "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600",
+        "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800",
         className
       )}
       tabIndex={0}

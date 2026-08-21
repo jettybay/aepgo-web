@@ -2,6 +2,14 @@
 /* stylelint-disable at-rule-no-unknown */
 @import "tailwindcss";
 
+:root {
+  --aepgo-forest: #123b24;
+  --aepgo-forest-deep: #082817;
+  --aepgo-gold: #d89a08;
+  --aepgo-gold-bright: #f0b429;
+  --aepgo-gold-soft: #fff7df;
+}
+
 @theme {
   /* Bottom clearance so the fixed MobileNav never covers the end of a page.
      MobileNav pill (~72px) + its 16px margin + breathing room + iOS home bar. */
@@ -15,7 +23,8 @@
 
 @layer base {
   body {
-    font-family: 'Inter', system_ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #fbfcf8;
   }
 }
 
@@ -37,6 +46,9 @@
     @apply bg-white rounded-3xl border border-gray-100 shadow-sm;
   }
   .purple-btn {
-    @apply bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-2xl transition-all;
+    @apply bg-green-900 hover:bg-green-950 text-white font-semibold py-3 px-6 rounded-2xl transition-all;
+  }
+  .gold-btn {
+    @apply bg-amber-500 hover:bg-amber-600 text-green-950 font-semibold py-3 px-6 rounded-xl transition-all shadow-sm;
   }
 }
